@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Residents List - Hostel Management System{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <h1>👥 Residents List</h1>
+        <a href="/add-student/" class="btn btn-primary">+ Add New Resident</a>
+    </div>
+
+    {% if students %}
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Room allotted</th>
+                                <th>Action</th>
+                            </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>#{{ student.id }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.age }}</td>
+                        <td><span class="badge bg-light text-dark" style="padding: 0.25rem 0.75rem; border-radius: 4px;">{{ student.grade }}</span></td>
+                        <td>
+                            <a href="/delete-student/{{ student.id }}/" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this student?')">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <p class="text-muted mt-3">Total Students: <strong>{{ students|length }}</strong></p>
+    {% else %}
+        <div class="card text-center">
+            <div class="card-body py-5">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">📭</div>
+                <h2 class="card-title">No Residents Found</h2>
+                <p class="card-text text-muted mb-4">There are no residents in the system yet. Get started by adding one!</p>
+                <a href="/add-student/" class="btn btn-primary">+ Add First Resident</a>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}
+      

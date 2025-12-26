@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block title %}Home - Hostel Management System{% endblock %}
+
+{% block content %}
+<main class="hero">
+    <div class="hero-content">
+        <h1 class="display-3 mb-3">Welcome, {{ user.username }}! 👋</h1>
+        <p class="lead mb-4">Manage hostel rooms, residents, and room allocations with ease</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap mb-4">
+            <a href="/view-students/" class="btn btn-primary btn-lg">View Residents</a>
+            <a href="/add-student/" class="btn btn-secondary btn-lg">Add Resident</a>
+        </div>
+    </div>
+</main>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose Us?</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
+                        <h5 class="card-title">Resident Management</h5>
+                        <p class="card-text">Easily manage resident records, allocate rooms, and maintain comprehensive databases</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                        <h5 class="card-title">Analytics Dashboard</h5>
+                        <p class="card-text">View insights and analytics with our comprehensive dashboard interface</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+                        <h5 class="card-title">Secure & Safe</h5>
+                        <p class="card-text">Your data is protected with enterprise-grade security measures</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                        <h5 class="card-title">Fast & Reliable</h5>
+                        <p class="card-text">Built for speed and reliability with optimal performance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                        <h5 class="card-title">Modern Design</h5>
+                        <p class="card-text">Beautiful, intuitive interface that's easy to navigate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                        <h5 class="card-title">Always Updated</h5>
+                        <p class="card-text">Continuous improvements and new features added regularly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 0.5rem;">100+</div>
+                        <div style="color: var(--text-muted); font-weight: 500;">Residents Managed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 0.5rem;">99.9%</div>
+                        <div style="color: var(--text-muted); font-weight: 500;">Uptime Guaranteed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 0.5rem;">24/7</div>
+                        <div style="color: var(--text-muted); font-weight: 500;">System Availability</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 0.5rem;">0%</div>
+                        <div style="color: var(--text-muted); font-weight: 500;">Data Loss</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// small enhancement: open guest booking in same page link handled by anchor
+</script>
+{% endblock %}
+       

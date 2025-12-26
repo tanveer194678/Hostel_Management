@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Guest Bookings - Hostel Management System{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <h1 class="mb-3">Guest Bookings</h1>
+    {% if bookings %}
+    <div class="list-group">
+        {% for b in bookings %}
+        <a href="{% url 'guest_booking_detail' b.pk %}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <div>
+                <strong>{{ b.name }}</strong> — <span class="text-muted">{{ b.room_requested }}</span>
+                <div class="small text-muted">{{ b.email }} • {{ b.created_at|date:'M d, Y H:i' }}</div>
+            </div>
+            <div class="badge bg-light text-dark rounded-pill">{{ b.status }}</div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="card">
+        <div class="card-body text-center">
+            <p class="mb-0 text-muted">No guest bookings yet.</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
